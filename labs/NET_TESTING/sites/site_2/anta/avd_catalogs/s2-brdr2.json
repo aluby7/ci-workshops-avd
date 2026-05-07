@@ -7,7 +7,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -19,7 +19,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -33,28 +33,28 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "neighbors": [
           {
             "port": "Ethernet1",
-            "neighbor_device": "s1-leaf1.atd.lab",
+            "neighbor_device": "s2-brdr1.atd.lab",
             "neighbor_port": "Ethernet1"
           },
           {
             "port": "Ethernet2",
-            "neighbor_device": "s1-spine1.atd.lab",
-            "neighbor_port": "Ethernet3"
+            "neighbor_device": "s2-spine1.atd.lab",
+            "neighbor_port": "Ethernet8"
           },
           {
             "port": "Ethernet3",
-            "neighbor_device": "s1-spine2.atd.lab",
-            "neighbor_port": "Ethernet3"
+            "neighbor_device": "s2-spine2.atd.lab",
+            "neighbor_port": "Ethernet8"
           },
           {
             "port": "Ethernet6",
-            "neighbor_device": "s1-leaf1.atd.lab",
+            "neighbor_device": "s2-brdr1.atd.lab",
             "neighbor_port": "Ethernet6"
           }
         ]
@@ -68,19 +68,19 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "hosts": [
           {
-            "destination": "172.16.1.4",
-            "source": "172.16.1.5",
+            "destination": "172.16.2.20",
+            "source": "172.16.2.21",
             "vrf": "default",
             "repeat": 1
           },
           {
-            "destination": "172.16.1.6",
-            "source": "172.16.1.7",
+            "destination": "172.16.2.22",
+            "source": "172.16.2.23",
             "vrf": "default",
             "repeat": 1
           }
@@ -95,18 +95,18 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "hosts": [
           {
-            "destination": "10.250.1.1",
+            "destination": "10.250.2.1",
             "source": "Loopback0",
             "vrf": "default",
             "repeat": 1
           },
           {
-            "destination": "10.250.1.2",
+            "destination": "10.250.2.2",
             "source": "Loopback0",
             "vrf": "default",
             "repeat": 1
@@ -123,7 +123,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "states": [
@@ -138,7 +138,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "states": [
@@ -153,7 +153,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -165,7 +165,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -177,7 +177,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -191,7 +191,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -203,7 +203,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -215,7 +215,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -227,7 +227,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -239,7 +239,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -251,7 +251,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "interfaces": [
@@ -268,7 +268,7 @@
             "status": "up"
           },
           {
-            "name": "Ethernet4",
+            "name": "Ethernet5",
             "status": "up"
           },
           {
@@ -288,19 +288,11 @@
             "status": "up"
           },
           {
-            "name": "Port-Channel4",
-            "status": "up"
-          },
-          {
             "name": "Vlan10",
             "status": "up"
           },
           {
             "name": "Vlan20",
-            "status": "up"
-          },
-          {
-            "name": "Vlan30",
             "status": "up"
           },
           {
@@ -329,7 +321,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -341,7 +333,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -355,7 +347,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -367,7 +359,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -379,7 +371,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -393,28 +385,28 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "bgp_peers": [
           {
-            "peer_address": "10.250.1.1",
+            "peer_address": "10.250.2.1",
             "vrf": "default"
           },
           {
-            "peer_address": "10.250.1.2",
+            "peer_address": "10.250.2.2",
             "vrf": "default"
           },
           {
-            "peer_address": "10.252.1.0",
+            "peer_address": "10.252.2.8",
             "vrf": "default"
           },
           {
-            "peer_address": "172.16.1.4",
+            "peer_address": "172.16.2.20",
             "vrf": "default"
           },
           {
-            "peer_address": "172.16.1.6",
+            "peer_address": "172.16.2.22",
             "vrf": "default"
           }
         ]
@@ -429,7 +421,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "model": "multi-agent"
@@ -444,7 +436,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -458,7 +450,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -470,7 +462,19 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
+          ]
+        }
+      }
+    },
+    {
+      "VerifyFileSystemUtilization": {
+        "result_overwrite": {
+          "custom_field": "Generated by AVD"
+        },
+        "filters": {
+          "tags": [
+            "s2-brdr2"
           ]
         }
       }
@@ -482,7 +486,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -494,7 +498,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
@@ -506,7 +510,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         },
         "allowed_causes": [
@@ -525,7 +529,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-brdr2"
           ]
         }
       }
