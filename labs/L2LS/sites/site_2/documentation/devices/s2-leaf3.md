@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - [Management](#management)
-  - [Banner](#banner)
   - [Management Interfaces](#management-interfaces)
   - [DNS Domain](#dns-domain)
   - [IP Name Servers](#ip-name-servers)
@@ -16,7 +15,6 @@
   - [AAA Authorization](#aaa-authorization)
 - [Monitoring](#monitoring)
   - [TerminAttr Daemon](#terminattr-daemon)
-  - [Logging](#logging)
 - [MLAG](#mlag)
   - [MLAG Summary](#mlag-summary)
   - [MLAG Device Configuration](#mlag-device-configuration)
@@ -45,15 +43,6 @@
   - [VRF Instances Device Configuration](#vrf-instances-device-configuration)
 
 ## Management
-
-### Banner
-
-#### MOTD Banner
-
-```text
-You shall not pass. Unless you are authorized. Then you shall pass.
-EOF
-```
 
 ### Management Interfaces
 
@@ -185,7 +174,6 @@ management api http-commands
 ```eos
 !
 username arista privilege 15 role network-admin secret sha512 <removed>
-username arista ssh-key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3d9y2PGbm4fSiMaqZjwrxJNNPkfna6LmjdN86NRSUu3/mWdiZ4dUr0NoXcVpuH6slRusWmZ75NfhcMGmqhHmEcUyEJjPNq0xBcZ8GE9H7KlTqrTRqowfHfnPIe6phJwH/rHxs5hcN0jeGDmuepKe+FXMEdlt2ZgLF4d5fzayaO2E8LMCfWJ7KBiBRNZhx3Gd0z4VsoDO6+SOw0qAjpNrLMjKOz5B3To1u8XT83zX945D6/vIj961TpNyEZD/RPf4dcCurJmxnzjUdwxMiGXFm180AC4rQbO683/0Tv+pJ3GWnTz87YJbih8/zPfR8jm3Jas5fdY4XyWyG72GLLKm5 arista@toronto-day2-15-1c55ad53-eos
 ```
 
 ### Enable Password
@@ -226,31 +214,6 @@ aaa authorization exec default local
 daemon TerminAttr
    exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token -cvvrf=default -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -taillogs -cvsourceintf=Management0
    no shutdown
-```
-
-### Logging
-
-#### Logging Servers and Features Summary
-
-| Type | Level |
-| -----| ----- |
-
-| VRF | Source Interface |
-| --- | ---------------- |
-| default | Management0 |
-
-| VRF | Hosts | Ports | Protocol | SSL-profile |
-| --- | ----- | ----- | -------- | ----------- |
-| default | 10.200.0.108 | Default | UDP | - |
-| default | 10.200.1.108 | Default | UDP | - |
-
-#### Logging Servers and Features Device Configuration
-
-```eos
-!
-logging host 10.200.0.108
-logging host 10.200.1.108
-logging source-interface Management0
 ```
 
 ## MLAG
