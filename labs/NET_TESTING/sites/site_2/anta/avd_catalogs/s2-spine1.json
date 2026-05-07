@@ -7,7 +7,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -19,7 +19,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -33,29 +33,39 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "neighbors": [
           {
-            "port": "Ethernet1",
-            "neighbor_device": "s1-leaf1.atd.lab",
-            "neighbor_port": "Ethernet1"
-          },
-          {
             "port": "Ethernet2",
-            "neighbor_device": "s1-spine1.atd.lab",
-            "neighbor_port": "Ethernet3"
+            "neighbor_device": "s2-leaf1.atd.lab",
+            "neighbor_port": "Ethernet2"
           },
           {
             "port": "Ethernet3",
-            "neighbor_device": "s1-spine2.atd.lab",
-            "neighbor_port": "Ethernet3"
+            "neighbor_device": "s2-leaf2.atd.lab",
+            "neighbor_port": "Ethernet2"
           },
           {
-            "port": "Ethernet6",
-            "neighbor_device": "s1-leaf1.atd.lab",
-            "neighbor_port": "Ethernet6"
+            "port": "Ethernet4",
+            "neighbor_device": "s2-leaf3.atd.lab",
+            "neighbor_port": "Ethernet2"
+          },
+          {
+            "port": "Ethernet5",
+            "neighbor_device": "s2-leaf4.atd.lab",
+            "neighbor_port": "Ethernet2"
+          },
+          {
+            "port": "Ethernet7",
+            "neighbor_device": "s2-brdr1.atd.lab",
+            "neighbor_port": "Ethernet2"
+          },
+          {
+            "port": "Ethernet8",
+            "neighbor_device": "s2-brdr2.atd.lab",
+            "neighbor_port": "Ethernet2"
           }
         ]
       }
@@ -68,19 +78,43 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "hosts": [
           {
-            "destination": "172.16.1.4",
-            "source": "172.16.1.5",
+            "destination": "172.16.2.1",
+            "source": "172.16.2.0",
             "vrf": "default",
             "repeat": 1
           },
           {
-            "destination": "172.16.1.6",
-            "source": "172.16.1.7",
+            "destination": "172.16.2.5",
+            "source": "172.16.2.4",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "172.16.2.9",
+            "source": "172.16.2.8",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "172.16.2.13",
+            "source": "172.16.2.12",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "172.16.2.17",
+            "source": "172.16.2.16",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "172.16.2.21",
+            "source": "172.16.2.20",
             "vrf": "default",
             "repeat": 1
           }
@@ -95,18 +129,42 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "hosts": [
           {
-            "destination": "10.250.1.1",
+            "destination": "10.250.2.3",
             "source": "Loopback0",
             "vrf": "default",
             "repeat": 1
           },
           {
-            "destination": "10.250.1.2",
+            "destination": "10.250.2.4",
+            "source": "Loopback0",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "10.250.2.5",
+            "source": "Loopback0",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "10.250.2.6",
+            "source": "Loopback0",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "10.250.2.7",
+            "source": "Loopback0",
+            "vrf": "default",
+            "repeat": 1
+          },
+          {
+            "destination": "10.250.2.8",
             "source": "Loopback0",
             "vrf": "default",
             "repeat": 1
@@ -123,7 +181,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "states": [
@@ -138,7 +196,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "states": [
@@ -153,7 +211,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -165,7 +223,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -177,7 +235,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -185,25 +243,13 @@
   ],
   "anta.tests.interfaces": [
     {
-      "VerifyIllegalLACP": {
-        "result_overwrite": {
-          "custom_field": "Generated by AVD"
-        },
-        "filters": {
-          "tags": [
-            "s1-leaf2"
-          ]
-        }
-      }
-    },
-    {
       "VerifyInterfaceDiscards": {
         "result_overwrite": {
           "custom_field": "Generated by AVD"
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -215,7 +261,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -227,7 +273,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -239,7 +285,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -251,14 +297,10 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "interfaces": [
-          {
-            "name": "Ethernet1",
-            "status": "up"
-          },
           {
             "name": "Ethernet2",
             "status": "up"
@@ -272,66 +314,22 @@
             "status": "up"
           },
           {
-            "name": "Ethernet6",
+            "name": "Ethernet5",
+            "status": "up"
+          },
+          {
+            "name": "Ethernet7",
+            "status": "up"
+          },
+          {
+            "name": "Ethernet8",
             "status": "up"
           },
           {
             "name": "Loopback0",
             "status": "up"
-          },
-          {
-            "name": "Loopback1",
-            "status": "up"
-          },
-          {
-            "name": "Port-Channel1",
-            "status": "up"
-          },
-          {
-            "name": "Port-Channel4",
-            "status": "up"
-          },
-          {
-            "name": "Vlan10",
-            "status": "up"
-          },
-          {
-            "name": "Vlan20",
-            "status": "up"
-          },
-          {
-            "name": "Vlan30",
-            "status": "up"
-          },
-          {
-            "name": "Vlan3009",
-            "status": "up"
-          },
-          {
-            "name": "Vlan4093",
-            "status": "up"
-          },
-          {
-            "name": "Vlan4094",
-            "status": "up"
-          },
-          {
-            "name": "Vxlan1",
-            "status": "up"
           }
         ]
-      }
-    },
-    {
-      "VerifyPortChannels": {
-        "result_overwrite": {
-          "custom_field": "Generated by AVD"
-        },
-        "filters": {
-          "tags": [
-            "s1-leaf2"
-          ]
-        }
       }
     },
     {
@@ -341,45 +339,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
-          ]
-        }
-      }
-    }
-  ],
-  "anta.tests.mlag": [
-    {
-      "VerifyMlagConfigSanity": {
-        "result_overwrite": {
-          "custom_field": "Generated by AVD"
-        },
-        "filters": {
-          "tags": [
-            "s1-leaf2"
-          ]
-        }
-      }
-    },
-    {
-      "VerifyMlagInterfaces": {
-        "result_overwrite": {
-          "custom_field": "Generated by AVD"
-        },
-        "filters": {
-          "tags": [
-            "s1-leaf2"
-          ]
-        }
-      }
-    },
-    {
-      "VerifyMlagStatus": {
-        "result_overwrite": {
-          "custom_field": "Generated by AVD"
-        },
-        "filters": {
-          "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -393,28 +353,56 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "bgp_peers": [
           {
-            "peer_address": "10.250.1.1",
+            "peer_address": "10.250.2.3",
             "vrf": "default"
           },
           {
-            "peer_address": "10.250.1.2",
+            "peer_address": "10.250.2.4",
             "vrf": "default"
           },
           {
-            "peer_address": "10.252.1.0",
+            "peer_address": "10.250.2.5",
             "vrf": "default"
           },
           {
-            "peer_address": "172.16.1.4",
+            "peer_address": "10.250.2.6",
             "vrf": "default"
           },
           {
-            "peer_address": "172.16.1.6",
+            "peer_address": "10.250.2.7",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "10.250.2.8",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "172.16.2.1",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "172.16.2.5",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "172.16.2.9",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "172.16.2.13",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "172.16.2.17",
+            "vrf": "default"
+          },
+          {
+            "peer_address": "172.16.2.21",
             "vrf": "default"
           }
         ]
@@ -429,7 +417,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "model": "multi-agent"
@@ -444,7 +432,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -458,7 +446,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -470,7 +458,19 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
+          ]
+        }
+      }
+    },
+    {
+      "VerifyFileSystemUtilization": {
+        "result_overwrite": {
+          "custom_field": "Generated by AVD"
+        },
+        "filters": {
+          "tags": [
+            "s2-spine1"
           ]
         }
       }
@@ -482,7 +482,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -494,7 +494,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         }
       }
@@ -506,7 +506,7 @@
         },
         "filters": {
           "tags": [
-            "s1-leaf2"
+            "s2-spine1"
           ]
         },
         "allowed_causes": [
@@ -514,20 +514,6 @@
           "Reload requested after FPGA upgrade",
           "System reloaded due to Zero Touch Provisioning"
         ]
-      }
-    }
-  ],
-  "anta.tests.vxlan": [
-    {
-      "VerifyVxlanConfigSanity": {
-        "result_overwrite": {
-          "custom_field": "Generated by AVD"
-        },
-        "filters": {
-          "tags": [
-            "s1-leaf2"
-          ]
-        }
       }
     }
   ]

@@ -58,7 +58,7 @@ ethernet_interfaces:
   peer_type: l3leaf
   switchport:
     enabled: false
-- name: Ethernet6
+- name: Ethernet7
   description: P2P_s1-brdr1_Ethernet2
   shutdown: false
   mtu: 1500
@@ -93,6 +93,17 @@ local_users:
   sha512_password: $6$arista$Cjt8ehx2UpZ4WjOxgbGCfaYHDEq7NnqWqIzT9QIdzpLXt4XZB3OQZTKMdYJ2omUKXGMThjZ.YNYXzcaueLJ8d/
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAD7t4mrUJwRGlkxRCRWRZymfgJaOmujf7uZROljnZI0NI253HmdkggWb27NqbwYCCjF/4Xz1BCr1+0KB7Q5Jlf3JG3vk3g22/LTJdEtvVnhCt2KsLsReHI4QOhzCJmpM4QNgLalECqUsyiW7/xSfk9GasqfEBCMqXdDRVCze0MhL4IkQ5vGUD06o1Pady0LnldH8+TDMlUcadX/X13UNiR92Erz4HR8EDBKdrbc2LVZdMnsow7DaNoGbfhfChNzLZYmkt8W+jRte0rk0i+abtEDxYJtR3jRyHU+WgCyhdbg6eADGl931s8XQePzp4tFjo78iwVrm0TptDe0P9h3Gl
     arista@toronto-day3-2-f66713f6-eos
+logging:
+  buffered:
+    size: 8000
+    level: notifications
+  trap: debugging
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.100.100.100
+      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
